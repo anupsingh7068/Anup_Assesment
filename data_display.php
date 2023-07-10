@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Data Display</title>
-  <!-- Add Bootstrap CSS -->
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     table {
@@ -69,7 +69,7 @@
     <button onclick="window.location.href='index.php'" class="btn btn-primary">Go Back</button>
   </div>
 
-  <!-- Add Bootstrap JS (optional if you need additional functionality) -->
+  
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

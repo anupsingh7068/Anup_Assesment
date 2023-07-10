@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Data Display</title>
-  
+  <!-- Add Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     table {
@@ -28,7 +28,7 @@
         <th>Salary</th>
       </tr>
       <?php
-    
+      // Connect to the database
       $servername = "localhost";
       $username = "root";
       $password = "";
@@ -36,12 +36,12 @@
 
       $conn = new mysqli($servername, $username, $password, $dbname);
 
-      
+      // Check connection
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
 
-      
+      // Fetch data from employees and departments tables using a JOIN
       $sql = "SELECT employees.EmployeeID, employees.Name, departments.Department, employees.Age, employees.Salary
               FROM employees
               INNER JOIN departments ON employees.DepartmentID = departments.DepartmentID";
@@ -68,8 +68,5 @@
     
     <button onclick="window.location.href='index.php'" class="btn btn-primary">Go Back</button>
   </div>
-
-  
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

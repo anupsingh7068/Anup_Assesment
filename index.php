@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Data Entry</title>
-  
+  <!-- Add Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
         <select class="form-control" id="department" name="department" required>
           <option value="">Select Department</option>
           <?php
-          
+          // Connect to the database
           $servername = "localhost";
           $username = "root";
           $password = "";
@@ -27,12 +27,12 @@
 
           $conn = new mysqli($servername, $username, $password, $dbname);
 
-        
+          // Check connection
           if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
           }
 
-        
+          // Fetch department data from the database
           $sql = "SELECT DepartmentID, Department FROM departments";
           $result = $conn->query($sql);
 
@@ -61,8 +61,6 @@
       <button onclick="window.location.href='data_display.php'" class="btn btn-secondary">View Data</button>
     </form>
   </div>
-
-  
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

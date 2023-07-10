@@ -13,6 +13,12 @@ if ($conn->connect_error) {
 }
 
 
+$name = $_POST['name'];
+$department = $_POST['department'];
+$age = $_POST['age'];
+$salary = $_POST['salary'];
+
+
 $sql = "INSERT INTO employees (Name, DepartmentID, Age, Salary) VALUES (?, ?, ?, ?)";
 
 

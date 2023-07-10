@@ -1,13 +1,16 @@
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+
+
 CREATE TABLE `departments` (
   `DepartmentID` int(11) NOT NULL,
   `Department` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 
 INSERT INTO `departments` (`DepartmentID`, `Department`) VALUES
@@ -38,5 +41,4 @@ ALTER TABLE `employees`
 ALTER TABLE `employees`
   MODIFY `EmployeeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
-
 
